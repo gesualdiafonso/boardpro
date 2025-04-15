@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta SEO -->
+
+    <!-- Links -->
+    <link rel="shortcut icon" href="assets/boardpro.svg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/css/uikit.min.css" />
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="styles/global.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.6/dist/js/uikit-icons.min.js"></script>
+    <title>BoardPro - Modular organization from corporative times.</title>
+</head>
+<body class="uk-background-muted uk-padding-small">
+
+    <!-- Header y Nav -->
+
+    <header class="uk-container uk-navbar-transparent uk-margin uk-flex">
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <h1>
+                    <span>Board</span>
+                    <span class="uk-text-primary">Pro</span>
+                </h1>
+            </a>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a href="">
+                        <span uk-icon="icon: settings"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="uk-container">
+        <section class="uk-margin-bottom">
+            <h2 class="uk-heading-line uk-text-bold">
+                <span>Departamentos</span>
+            </h2>
+        
+            <form id="dept-form" class="uk-grid-small uk-margin-small" uk-grid>
+                <div class="uk-width-expand">
+                <input id="dept-name" class="uk-input" type="text" placeholder="Nombre del Departamento" required>
+                </div>
+                <div class="uk-width-auto">
+                    <button class="uk-button uk-button-primary" type="submit">Adicionar</button>
+                </div>
+            </form>
+
+            <!-- Tabs dinámicas -->
+            <ul class="uk-subnav uk-subnav-pill uk-margin-small-top" id="dept-tabs" uk-switcher="connect: #dept-content"></ul>
+        </section>
+        <!-- Secciones de tareas por departamento -->
+        <ul id="dept-content" class="uk-switcher uk-margin"></ul>
+    </main>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

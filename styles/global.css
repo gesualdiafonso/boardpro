@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: initial;
+}
+
+:root{
+    --text-Headers: "Relaway", serif;
+    --text: "Roboto", sans-serif;
+
+}
+
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    font-family: var(--text-Headers);
+    font-size: 2.5rem;
+}
+p, span, a, li, label, button, input, textarea, select, option{
+    font-family: var(--text);
+}
